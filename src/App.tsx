@@ -1,46 +1,57 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
     return (
         <div>
-            This is App component
-            <Rating />
+            <AppTitle />
             <Accordion />
+            <Rating />
         </div>
     );
 }
 
+function AppTitle() {
+    return <>This is App component</>;
+}
+
 function Rating() {
-    debugger;
     return (
-        <div>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-            <Star/>
-        </div>
+        <>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+        </>
     );
 }
 
 function Accordion() {
-    debugger;
     return (
         <div>
-            <h3>Меню</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
+            <AccordionTitle />
+            <AccordionBody />
         </div>
     );
 }
 
-function Star(){
-  return  <div>star</div>
+function AccordionTitle() {
+    return <h3>Меню</h3>;
+}
+
+function AccordionBody() {
+    return (
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    );
+}
+
+function Star() {
+    return <div>star</div>;
 }
 
 export default App;
