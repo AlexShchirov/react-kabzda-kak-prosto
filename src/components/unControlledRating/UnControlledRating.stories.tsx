@@ -1,5 +1,3 @@
-import { title } from "process";
-import { DefaultInputValue } from '../UncontrolledOnOf/UncontrolledOnOff.stories';
 import { UncontrollRating } from "./UnControlledRating";
 import { action } from '@storybook/addon-actions';
 
