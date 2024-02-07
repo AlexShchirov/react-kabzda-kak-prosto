@@ -8,42 +8,12 @@ export default  {
 };
 
 
-const onChangeHandler = action('onChange')
+const callback = action('accordion mode change event fired')
 
+export const CollapsedMode = () => <Accordion titleValue={'Menu'} collapsed={true} onChange={callback} />;
+export const UnCollapsedMode = () => <Accordion titleValue={'users'} collapsed={false} onChange={callback} />;
 
-export const  DemoAccordion =()=> {
-    const [collapsed, setCollapsed] = useState(false)
-    return (
-        <div>
-            <Accordion
-                titleValue={'DemoAccordion'}
-                collapsed = {collapsed}
-                onChange={() => setCollapsed(!collapsed)}
-            />
-        </div>
-    );
-}
-export const  CollapsedAccordion =()=> {
-    const [collapsed, setCollapsed] = useState(false)
-    return (
-        <div>
-            <Accordion
-                titleValue={'DemoAccordion'}
-                collapsed = {collapsed}
-                onChange={onChangeHandler}
-            />
-        </div>
-    );
-}
-export const  OpenedAccordion =()=> {
-    const [collapsed, setCollapsed] = useState(false)
-    return (
-        <div>
-            <Accordion
-                titleValue={'DemoAccordion'}
-                collapsed = {collapsed}
-                onChange={onChangeHandler}
-            />
-        </div>
-    );
-}
+export const ModeChanging = () => {
+    const [value, setValue] = useState<boolean>(true)
+    return <Accordion titleValue={'users'} collapsed={value} onChange={() => setValue(!value)} />;
+};
