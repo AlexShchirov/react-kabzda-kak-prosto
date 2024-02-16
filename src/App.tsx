@@ -17,14 +17,14 @@ function App() {
             {/* <OnOff on={switchOn} onChange={(on) => {setSwitchOn(on)}}/> */}
             <UnControlledAccordion titleValue={"---Menu---"} />
             <UnControlledAccordion titleValue={"---Stars---"} />
-            <UncontrollRating />
+            {/* <UncontrollRating /> */}
             <Rating value={ratingValue} onClick={setRatingValue} />
-            <Accordion
+            {/* <Accordion
                 titleValue={"Menu"}
                 collapsed={accordionCollapsed}
                 onChange={() => {
                     setAccordionCollapsed(!accordionCollapsed);
-                }}/>
+                }}/> */}
             
                 <UncontrolledOnOff onChange={setSwitchOn}/>{switchOn.toString()}
             
